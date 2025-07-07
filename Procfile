@@ -1,3 +1,3 @@
-gunicorn trustproject.wsgi
+start: gunicorn trustproject.wsgi --chdir trustproject
 
 
