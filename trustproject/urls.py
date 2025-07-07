@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('', home_view),  # 👈 shows message on /
     path('admin/', admin.site.urls),
     path('api/', include('trustapi.urls')),
 ]
