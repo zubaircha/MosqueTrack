@@ -20,7 +20,9 @@ from trustapi.views import home_view
 
 
 urlpatterns = [
+    
     path('', home_view),  # 👈 shows message on /
     path('admin/', admin.site.urls),
     path('api/', include('trustapi.urls')),
 ]
+  

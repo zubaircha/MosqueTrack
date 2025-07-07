@@ -20,12 +20,10 @@ from .models import CustomUser
 from .serializers import UserApprovalSerializer
 from django.http import JsonResponse
 
-
+User = get_user_model()
 
 def home_view(request):
     return HttpResponse("✅ MosqueTrack Backend is Live!")
-
-User = get_user_model()
 
 @api_view(['POST'])
 def register_user(request):
