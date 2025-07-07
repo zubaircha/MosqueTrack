@@ -1,1 +1,2 @@
-web: gunicorn trustproject.wsgi
+web: gunicorn trustproject.wsgi --chdir trustproject
+
