@@ -4,13 +4,13 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 urlpatterns = [
     
-    path('me/', get_user_info),
+   
     path('funds/', add_fund), 
     path('register/', register_user),
     path('login/', login_view),
     
     path('me/', get_user_info),
-    path('funds/', add_fund),      
+       
     path('expenses/', add_expense),
     path('persons/add/', create_person),
     path('pay/', add_pay),
@@ -27,6 +27,6 @@ urlpatterns = [
     path('admin/approve-user/<int:user_id>/',approve_user),
     path('admin/decline-user/<int:user_id>/',decline_user),
      path('pay/unpaid/', unpaid_persons_summary),
-      path('me/', get_user_info),
+      
 
 ]
