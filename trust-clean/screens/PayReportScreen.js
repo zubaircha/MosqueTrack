@@ -24,7 +24,7 @@ export default function PayReportScreen() {
   const handleDownload = async () => {
     const token = await AsyncStorage.getItem('token');
     const month = formatMonth(selectedDate);
-    const url = `http://192.168.100.33:8000/api/pay/pdf/?month=${month}`; // Replace with your IP
+    const url = `https://mosquetrack-production.up.railway.app/api/pay/pdf/?month=${month}`; // Replace with your IP
 
     if (Platform.OS === 'web') {
       try {

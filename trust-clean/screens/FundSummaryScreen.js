@@ -32,7 +32,7 @@ export default function FundSummaryScreen() {
     const fetchSummary = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
-        await axios.get('http://192.168.100.33:8000/api/summary/pdf/', {
+        await axios.get('https://mosquetrack-production.up.railway.app/api/summary/pdf/', {
           params: {
             from: formatDate(fromDate),
             to: formatDate(toDate),

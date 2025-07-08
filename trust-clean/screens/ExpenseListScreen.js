@@ -34,7 +34,7 @@ export default function ExpenseListScreen() {
     const fetchExpenses = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
-        const response = await api.get('pdf/expenses/', {
+        const response = await axios.get('https://mosquetrack-production.up.railway.app/api/pdf/expenses/', {
           params: {
             from: formatDate(fromDate),
             to: formatDate(toDate),
@@ -57,7 +57,7 @@ export default function ExpenseListScreen() {
     const from = formatDate(fromDate);
     const to = formatDate(toDate);
     const token = await AsyncStorage.getItem('token');
-    const url = `http://192.168.100.33:8000/api/pdf/expenses/?from=${from}&to=${to}`;
+    const url = `https://mosquetrack-production.up.railway.app/api/pdf/expenses/?from=${from}&to=${to}`;
 
     if (Platform.OS === 'web') {
       try {

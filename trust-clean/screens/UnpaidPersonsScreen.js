@@ -23,7 +23,7 @@ const UnpaidPersonsScreen = () => {
       const formattedMonth = formatMonth(month);
 
       const response = await axios.get(
-        `http://192.168.100.33:8000/api/pay/unpaid/?month=${formattedMonth}`,
+        `https://mosquetrack-production.up.railway.app/api/pay/unpaid/?month=${formattedMonth}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

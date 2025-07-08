@@ -19,7 +19,7 @@ export default function PayStatusSummaryScreen() {
     const token = await AsyncStorage.getItem('token');
     const selectedMonth = formatMonth(month);
     try {
-      const response = await axios.get(`http://192.168.100.33:8000/api/pay/status-summary/?month=${selectedMonth}`, {
+      const response = await axios.get(`https://mosquetrack-production.up.railway.app/api/pay/status-summary/?month=${selectedMonth}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSummary(response.data);

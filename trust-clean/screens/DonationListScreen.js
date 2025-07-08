@@ -39,7 +39,7 @@ export default function DonationListScreen() {
     const fetchDonations = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
-        const response = await axios.get('http://192.168.100.33:8000/api/pdf/donations/', {
+        const response = await axios.get('https://mosquetrack-production.up.railway.app/api/pdf/donations/', {
           params: {
             from: formatDate(fromDate),
             to: formatDate(toDate),
@@ -63,7 +63,7 @@ export default function DonationListScreen() {
     const from = formatDate(fromDate);
     const to = formatDate(toDate);
     const token = await AsyncStorage.getItem('token');
-    const url = `http://192.168.100.33:8000/api/pdf/donations/?from=${from}&to=${to}`;
+    const url = `https://mosquetrack-production.up.railway.app/api/pdf/donations/?from=${from}&to=${to}`;
    
 
     if (Platform.OS === 'web') {

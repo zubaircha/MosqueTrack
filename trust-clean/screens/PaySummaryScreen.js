@@ -25,7 +25,7 @@ export default function PaySummaryScreen() {
   const handleDownloadPDF = async () => {
     const month = getMonthString(selectedDate);
     const token = await AsyncStorage.getItem('token');
-    const url = `http://192.168.100.33:8000/api/pay/pdf/?month=${month}`;
+    const url = `https://mosquetrack-production.up.railway.app/api/pay/pdf/?month=${month}`;
 
     if (Platform.OS === 'web') {
       try {

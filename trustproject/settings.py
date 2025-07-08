@@ -25,10 +25,12 @@ SECRET_KEY = 'django-insecure-9jax$8_4nucf$-el2e01@k=z5@9b^@57s6+6@tqz&7!7t^oq8&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['mosquetrack-production.up.railway.app']
 
-
-ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = [
+    'https://mosquetrack-production.up.railway.app',
+]
 
 
 
@@ -125,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -137,4 +140,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    "https://mosquetrack-production.up.railway.app",
+]
