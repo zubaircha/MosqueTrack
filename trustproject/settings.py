@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-9jax$8_4nucf$-el2e01@k=z5@9b^@57s6+6@tqz&7!7t^oq8&
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = False
-ALLOWED_HOSTS = ['mosquetrack-production.up.railway.app']
+ALLOWED_HOSTS = [
+    "mosquetrack-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://mosquetrack-production.up.railway.app',
@@ -144,3 +148,10 @@ CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "https://mosquetrack-production.up.railway.app",
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
