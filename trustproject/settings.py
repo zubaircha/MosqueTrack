@@ -21,17 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-#SECRET_KEY = 'django-insecure-9jax$8_4nucf$-el2e01@k=z5@9b^@57s6+6@tqz&7!7t^oq8&'
+SECRET_KEY = 'django-insecure-9jax$8_4nucf$-el2e01@k=z5@9b^@57s6+6@tqz&7!7t^oq8&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-#DEBUG = True
+DEBUG = True
 
-# Use secret key from environment variable (for security)
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-default-fallback-key')
 
-# Set DEBUG based on environment (string 'True' → boolean True)
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = ['*']
 
 
