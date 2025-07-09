@@ -144,10 +144,13 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
-CORS_ALLOW_ALL_ORIGINS = False
+
 CORS_ALLOWED_ORIGINS = [
     "https://mosquetrack-production.up.railway.app",
 ]
+
+CORS_ALLOW_NULL_ORIGIN = True  # ✅ For mobile app support
+
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
