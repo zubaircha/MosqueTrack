@@ -21,9 +21,9 @@ export default function RegisterScreen({ navigation }) {
     console.log("❌ error:", error);
     console.log("❌ error.response:", error.response);
     console.log("❌ error.request:", error.request);
-    console.log("❌ error.message:", error.message);
+    console.log("❌ error.message:", error.message);   
+    Alert.alert("Error", JSON.stringify(error.response?.data || error.message));
 
-    Alert.alert("Network Error", error.message);
   }
 };
 
